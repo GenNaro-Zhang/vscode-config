@@ -149,7 +149,6 @@
   "js/ts.updateImportsOnFileMove.enabled": "never",
   "js/ts.implicitProjectConfig.checkJs": true,
   "js/ts.preferences.organizeImports": {},
-  "javascript.updateImportsOnFileMove.enabled": "never",
   "html.format.unformatted": "",
   "less.lint.vendorPrefix": "ignore",
   "less.compile": {
