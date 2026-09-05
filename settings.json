@@ -1,17 +1,23 @@
 {
+  "$schema": "vscode://schemas/settings/user",
   "workbench.colorTheme": "One Dark Pro",
   "workbench.iconTheme": "material-icon-theme",
   "editor.fontSize": 16,
   "editor.formatOnSave": true,
+  "editor.fontFamily": "JetBrains Mono Regular, JetBrainsMono-Regular, Menlo, Monaco, 'Courier New', monospace",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.suggestSelection": "recentlyUsedByPrefix",
   "files.autoSave": "onWindowChange",
+  "files.autoSaveWorkspaceFilesOnly": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.cursorBlinking": "smooth",
   "editor.fontLigatures": true,
-  "editor.minimap.enabled": false,
   "files.autoGuessEncoding": true,
   "files.defaultLanguage": "${activeEditorLanguage}",
   "files.trimTrailingWhitespace": true,
   "workbench.activityBar.compact": true,
+  "workbench.tree.indent": 16,
+  "workbench.browser.showInTitleBar": false,
   "chat.disableAIFeatures": true,
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
@@ -33,5 +39,143 @@
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontSize": 16,
-  "window.commandCenter": false
+  "terminal.integrated.enableImages": true,
+  "window.commandCenter": false,
+  "diffEditor.experimental.showMoves": true,
+  "diffEditor.wordWrap": "off",
+  "workbench.editor.customLabels.patterns": {
+    "**/app/**/{*.tsx,route.ts,actions.ts}": "${dirname(1)}/${dirname} ∙ ${filename}",
+    "**/components/**/*": "${dirname}/${filename}.${extname}"
+  },
+  "workbench.editor.useModal": "off",
+  "workbench.settings.openDefaultKeybindings": true,
+  "screencastMode.fontSize": 48,
+  "chat.agentSkillsLocations": {
+    ".codebuddy/skills": true,
+    "~/codebuddy/skills": true
+  },
+  "chat.includeReferencedInstructions": false,
+  "explorer.decorations.badges": false,
+  "search.searchEditor.reusePriorSearchConfiguration": true,
+  "search.sortOrder": "modified",
+  "search.useIgnoreFiles": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "always",
+  "chat.commandCenter.enabled": false,
+  "chat.tips.enabled": false,
+  "chat.titleBar.openInAgentsWindow.enabled": false,
+  "chat.viewSessions.orientation": "stacked",
+  "code-runner.runInTerminal": true,
+  "codingcopilot.enableFloatShortcut": false,
+  "commentTranslate.maxTranslationLength": 1000,
+  "commentTranslate.source": "Bing",
+  "commentTranslate.targetLanguage": "zh-CN",
+  "css.enabledLanguages": [
+    "vue",
+    "jsx",
+    "html"
+  ],
+  "css.lint.duplicateProperties": "warning",
+  "css.lint.propertyIgnoredDueToDisplay": "ignore",
+  "css.lint.unknownAtRules": "ignore",
+  "css.lint.unknownProperties": "ignore",
+  "css.lint.validProperties": [
+    "dominant-baseline",
+    "alignment-baseline",
+    "vertical-align"
+  ],
+  "css.lint.vendorPrefix": "ignore",
+  "css.styleSheets": [
+    "src/**/*.css",
+    "styles/*.css",
+    "style/*.css",
+    "css/*.css"
+  ],
+  "editor.acceptSuggestionOnEnter": "smart",
+  "editor.accessibilitySupport": "off",
+  "editor.autoClosingDelete": "always",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "editor.formatOnPaste": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.minimap.autohide": "mouseover",
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "editor.unicodeHighlight.includeStrings": false,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.fileNesting.expand": false,
+  "files.associations": {
+    "*.js": "javascript",
+    "*.rules": "firestorerules"
+  },
+  "files.trimFinalNewlines": true,
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "git.ignoreMissingGitWarning": true,
+  "git.openRepositoryInParentFolders": "never",
+  "github.copilot.nextEditSuggestions.enabled": false,
+  "gitlens.advanced.messages": {
+    "suppressGitDisabledWarning": true,
+    "suppressGitMissingWarning": true
+  },
+  "html.format.unformatted": "",
+  "js/ts.implicitProjectConfig.checkJs": true,
+  "js/ts.preferences.organizeImports": {},
+  "js/ts.updateImportsOnFileMove.enabled": "never",
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "**/package.json"
+      ],
+      "url": ".vscode/stylelintrc.json"
+    },
+    {
+      "fileMatch": [
+        "**/check.json"
+      ],
+      "url": "https://coderabbit.ai/integrations/schema.v2.json"
+    }
+  ],
+  "less.compile": {
+    "out": "${workspaceRoot}/css/"
+  },
+  "less.lint.vendorPrefix": "ignore",
+  "liveServer.settings.CustomBrowser": "chrome",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "merge-conflict.autoNavigateNextConflict.enabled": true,
+  "prettier.arrowParens": "avoid",
+  "svgPreview.autoOpen": false,
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html"
+  },
+  "terminal.integrated.cursorStyleInactive": "block",
+  "terminal.integrated.initialHint": false,
+  "terminal.integrated.suggest.enabled": true,
+  "terminal.integrated.suggest.providers": {
+    "lsp": true
+  },
+  "terminal.integrated.suggest.quickSuggestions": {
+    "arguments": "off",
+    "commands": "on",
+    "unknown": "off"
+  },
+  "window.customTitleBarVisibility": "never",
+  "window.zoomPerWindow": false,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editorAssociations": {
+    "*.db": "default",
+    "*.sass": "default"
+  },
+  "workbench.secondarySideBar.defaultVisibility": "visible",
+  "workbench.settings.applyToAllProfiles": [
+    "explorer.fileNesting.patterns"
+  ],
+  "workbench.startupEditor": "none",
+  "workbench.view.alwaysShowHeaderActions": true
 }
