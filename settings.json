@@ -1,5 +1,4 @@
 {
-  // settings.json —— 按功能分组整理，组内按日常使用频率从高到低排列
   "$schema": "vscode://schemas/settings/user",
   // ================== 外观与主题 ==================
   "workbench.colorTheme": "One Dark Pro",
