@@ -1,25 +1,87 @@
 {
+  // settings.json —— 按功能分组整理，组内按日常使用频率从高到低排列
   "$schema": "vscode://schemas/settings/user",
+  // ================== 外观与主题 ==================
   "workbench.colorTheme": "One Dark Pro",
   "workbench.iconTheme": "material-icon-theme",
+  "window.commandCenter": false,
+  "window.customTitleBarVisibility": "never",
+  "workbench.browser.showInTitleBar": false,
+  "window.zoomPerWindow": false,
+  // ================== 编辑器 ==================
   "editor.fontSize": 16,
-  "editor.formatOnSave": true,
   "editor.fontFamily": "JetBrains Mono Regular, JetBrainsMono-Regular, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "on",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.suggestSelection": "recentlyUsedByPrefix",
+  "editor.acceptSuggestionOnEnter": "smart",
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "editor.guides.bracketPairs": "active",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "editor.autoClosingDelete": "always",
+  "editor.minimap.autohide": "mouseover",
+  "editor.unicodeHighlight.includeStrings": false,
+  "editor.accessibilitySupport": "off",
+  // ================== 文件与保存 ==================
   "files.autoSave": "onWindowChange",
   "files.autoSaveWorkspaceFilesOnly": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.cursorBlinking": "smooth",
-  "editor.fontLigatures": true,
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
   "files.autoGuessEncoding": true,
   "files.defaultLanguage": "${activeEditorLanguage}",
-  "files.trimTrailingWhitespace": true,
+  "files.associations": {
+    "*.js": "javascript",
+    "*.rules": "firestorerules"
+  },
+  // ================== 终端 ==================
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.enableImages": true,
+  "terminal.integrated.enableMultiLinePasteWarning": "always",
+  "terminal.integrated.suggest.enabled": true,
+  "terminal.integrated.suggest.quickSuggestions": {
+    "arguments": "off",
+    "commands": "on",
+    "unknown": "off"
+  },
+  "terminal.integrated.suggest.providers": {
+    "lsp": true
+  },
+  "terminal.integrated.cursorStyleInactive": "block",
+  "terminal.integrated.initialHint": false,
+  // ================== 工作台与窗口 ==================
   "workbench.activityBar.compact": true,
   "workbench.tree.indent": 16,
-  "workbench.browser.showInTitleBar": false,
-  "chat.disableAIFeatures": true,
+  "workbench.editor.customLabels.patterns": {
+    "**/app/**/{*.tsx,route.ts,actions.ts}": "${dirname(1)}/${dirname} ∙ ${filename}",
+    "**/components/**/*": "${dirname}/${filename}.${extname}"
+  },
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editorAssociations": {
+    "*.db": "default",
+    "*.sass": "default"
+  },
+  "workbench.editor.useModal": "off",
+  "workbench.settings.openDefaultKeybindings": true,
+  "workbench.settings.applyToAllProfiles": [
+    "explorer.fileNesting.patterns"
+  ],
+  "workbench.startupEditor": "none",
+  "workbench.secondarySideBar.defaultVisibility": "visible",
+  "workbench.view.alwaysShowHeaderActions": true,
+  "screencastMode.fontSize": 48,
+  // ================== 资源管理器 ==================
   "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
     "*.css": "$(capture).css.map, $(capture).*.css",
     "*.js": "$(capture).js.map, $(capture).*.js, $(capture)_*.js",
@@ -36,98 +98,66 @@
     "vite.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*",
     "vue.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*"
   },
-  "terminal.integrated.copyOnSelection": true,
-  "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.fontSize": 16,
-  "terminal.integrated.enableImages": true,
-  "window.commandCenter": false,
+  "explorer.decorations.badges": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  // ================== 搜索与差异对比 ==================
+  "search.searchEditor.reusePriorSearchConfiguration": true,
+  "search.sortOrder": "modified",
+  "search.useIgnoreFiles": false,
   "diffEditor.experimental.showMoves": true,
   "diffEditor.wordWrap": "off",
-  "workbench.editor.customLabels.patterns": {
-    "**/app/**/{*.tsx,route.ts,actions.ts}": "${dirname(1)}/${dirname} ∙ ${filename}",
-    "**/components/**/*": "${dirname}/${filename}.${extname}"
-  },
-  "workbench.editor.useModal": "off",
-  "workbench.settings.openDefaultKeybindings": true,
-  "screencastMode.fontSize": 48,
+  // ================== AI 与聊天 ==================
+  "chat.disableAIFeatures": true,
   "chat.agentSkillsLocations": {
     ".codebuddy/skills": true,
     "~/codebuddy/skills": true
   },
   "chat.includeReferencedInstructions": false,
-  "explorer.decorations.badges": false,
-  "search.searchEditor.reusePriorSearchConfiguration": true,
-  "search.sortOrder": "modified",
-  "search.useIgnoreFiles": false,
-  "terminal.integrated.enableMultiLinePasteWarning": "always",
-  "chat.commandCenter.enabled": false,
   "chat.tips.enabled": false,
-  "chat.titleBar.openInAgentsWindow.enabled": false,
   "chat.viewSessions.orientation": "stacked",
-  "code-runner.runInTerminal": true,
+  "chat.titleBar.openInAgentsWindow.enabled": false,
+  "chat.commandCenter.enabled": false,
   "codingcopilot.enableFloatShortcut": false,
-  "commentTranslate.maxTranslationLength": 1000,
-  "commentTranslate.source": "Bing",
-  "commentTranslate.targetLanguage": "zh-CN",
+  "github.copilot.nextEditSuggestions.enabled": false,
+  // ================== 代码质量与语言 ==================
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
   "css.enabledLanguages": [
     "vue",
     "jsx",
     "html"
   ],
   "css.lint.duplicateProperties": "warning",
-  "css.lint.propertyIgnoredDueToDisplay": "ignore",
-  "css.lint.unknownAtRules": "ignore",
   "css.lint.unknownProperties": "ignore",
+  "css.lint.unknownAtRules": "ignore",
+  "css.lint.propertyIgnoredDueToDisplay": "ignore",
+  "css.lint.vendorPrefix": "ignore",
   "css.lint.validProperties": [
     "dominant-baseline",
     "alignment-baseline",
     "vertical-align"
   ],
-  "css.lint.vendorPrefix": "ignore",
   "css.styleSheets": [
     "src/**/*.css",
     "styles/*.css",
     "style/*.css",
     "css/*.css"
   ],
-  "editor.acceptSuggestionOnEnter": "smart",
-  "editor.accessibilitySupport": "off",
-  "editor.autoClosingDelete": "always",
-  "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit"
-  },
-  "editor.formatOnPaste": true,
-  "editor.guides.bracketPairs": "active",
-  "editor.minimap.autohide": "mouseover",
-  "editor.quickSuggestions": {
-    "strings": "on"
-  },
-  "editor.unicodeHighlight.includeStrings": false,
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
-  },
-  "emmet.triggerExpansionOnTab": true,
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "explorer.fileNesting.expand": false,
-  "files.associations": {
-    "*.js": "javascript",
-    "*.rules": "firestorerules"
-  },
-  "files.trimFinalNewlines": true,
-  "git.autofetch": true,
-  "git.enableSmartCommit": true,
-  "git.ignoreMissingGitWarning": true,
-  "git.openRepositoryInParentFolders": "never",
-  "github.copilot.nextEditSuggestions.enabled": false,
-  "gitlens.advanced.messages": {
-    "suppressGitDisabledWarning": true,
-    "suppressGitMissingWarning": true
-  },
-  "html.format.unformatted": "",
+  "js/ts.updateImportsOnFileMove.enabled": "never",
   "js/ts.implicitProjectConfig.checkJs": true,
   "js/ts.preferences.organizeImports": {},
-  "js/ts.updateImportsOnFileMove.enabled": "never",
+  "html.format.unformatted": "",
+  "less.lint.vendorPrefix": "ignore",
+  "less.compile": {
+    "out": "${workspaceRoot}/css/"
+  },
+  "prettier.arrowParens": "avoid",
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html"
+  },
   "json.schemas": [
     {
       "fileMatch": [
@@ -142,40 +172,22 @@
       "url": "https://coderabbit.ai/integrations/schema.v2.json"
     }
   ],
-  "less.compile": {
-    "out": "${workspaceRoot}/css/"
+  // ================== Git ==================
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "git.ignoreMissingGitWarning": true,
+  "git.openRepositoryInParentFolders": "never",
+  "gitlens.advanced.messages": {
+    "suppressGitDisabledWarning": true,
+    "suppressGitMissingWarning": true
   },
-  "less.lint.vendorPrefix": "ignore",
+  "merge-conflict.autoNavigateNextConflict.enabled": true,
+  // ================== 工具类扩展 ==================
+  "code-runner.runInTerminal": true,
   "liveServer.settings.CustomBrowser": "chrome",
   "liveServer.settings.donotShowInfoMsg": true,
-  "merge-conflict.autoNavigateNextConflict.enabled": true,
-  "prettier.arrowParens": "avoid",
-  "svgPreview.autoOpen": false,
-  "tailwindCSS.includeLanguages": {
-    "plaintext": "html"
-  },
-  "terminal.integrated.cursorStyleInactive": "block",
-  "terminal.integrated.initialHint": false,
-  "terminal.integrated.suggest.enabled": true,
-  "terminal.integrated.suggest.providers": {
-    "lsp": true
-  },
-  "terminal.integrated.suggest.quickSuggestions": {
-    "arguments": "off",
-    "commands": "on",
-    "unknown": "off"
-  },
-  "window.customTitleBarVisibility": "never",
-  "window.zoomPerWindow": false,
-  "workbench.editor.highlightModifiedTabs": true,
-  "workbench.editorAssociations": {
-    "*.db": "default",
-    "*.sass": "default"
-  },
-  "workbench.secondarySideBar.defaultVisibility": "visible",
-  "workbench.settings.applyToAllProfiles": [
-    "explorer.fileNesting.patterns"
-  ],
-  "workbench.startupEditor": "none",
-  "workbench.view.alwaysShowHeaderActions": true
+  "commentTranslate.source": "Bing",
+  "commentTranslate.targetLanguage": "zh-CN",
+  "commentTranslate.maxTranslationLength": 1000,
+  "svgPreview.autoOpen": false
 }
