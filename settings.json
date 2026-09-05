@@ -28,6 +28,7 @@
   },
   "editor.autoClosingDelete": "always",
   "editor.minimap.autohide": "mouseover",
+  "editor.minimap.enabled": false,
   "editor.unicodeHighlight.includeStrings": false,
   "editor.accessibilitySupport": "off",
   // ================== 文件与保存 ==================
@@ -41,6 +42,7 @@
     "*.js": "javascript",
     "*.rules": "firestorerules"
   },
+  "files.insertFinalNewline": false,
   // ================== 终端 ==================
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.cursorBlinking": true,
@@ -53,9 +55,12 @@
     "commands": "on",
     "unknown": "off"
   },
+  "terminal.integrated.suggest.insertTrailingSpace": false,
   "terminal.integrated.suggest.providers": {
-    "lsp": true
+    "lsp": true,
+    "vscode.terminal-suggest": true
   },
+  "terminal.integrated.suggest.suggestOnTriggerCharacters": true,
   "terminal.integrated.cursorStyleInactive": "block",
   "terminal.integrated.initialHint": false,
   // ================== 工作台与窗口 ==================
@@ -72,9 +77,7 @@
   },
   "workbench.editor.useModal": "off",
   "workbench.settings.openDefaultKeybindings": true,
-  "workbench.settings.applyToAllProfiles": [
-    "explorer.fileNesting.patterns"
-  ],
+  "workbench.settings.applyToAllProfiles": ["explorer.fileNesting.patterns"],
   "workbench.startupEditor": "none",
   "workbench.secondarySideBar.defaultVisibility": "visible",
   "workbench.view.alwaysShowHeaderActions": true,
@@ -119,17 +122,14 @@
   "chat.titleBar.openInAgentsWindow.enabled": false,
   "chat.commandCenter.enabled": false,
   "codingcopilot.enableFloatShortcut": false,
+  "codingcopilot.enableCodelens": false,
   "github.copilot.nextEditSuggestions.enabled": false,
   // ================== 代码质量与语言 ==================
   "emmet.triggerExpansionOnTab": true,
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
-  "css.enabledLanguages": [
-    "vue",
-    "jsx",
-    "html"
-  ],
+  "css.enabledLanguages": ["vue", "jsx", "html"],
   "css.lint.duplicateProperties": "warning",
   "css.lint.unknownProperties": "ignore",
   "css.lint.unknownAtRules": "ignore",
@@ -149,6 +149,7 @@
   "js/ts.updateImportsOnFileMove.enabled": "never",
   "js/ts.implicitProjectConfig.checkJs": true,
   "js/ts.preferences.organizeImports": {},
+  "javascript.updateImportsOnFileMove.enabled": "never",
   "html.format.unformatted": "",
   "less.lint.vendorPrefix": "ignore",
   "less.compile": {
@@ -160,15 +161,11 @@
   },
   "json.schemas": [
     {
-      "fileMatch": [
-        "**/package.json"
-      ],
+      "fileMatch": ["**/package.json"],
       "url": ".vscode/stylelintrc.json"
     },
     {
-      "fileMatch": [
-        "**/check.json"
-      ],
+      "fileMatch": ["**/check.json"],
       "url": "https://coderabbit.ai/integrations/schema.v2.json"
     }
   ],
@@ -188,6 +185,28 @@
   "liveServer.settings.donotShowInfoMsg": true,
   "commentTranslate.source": "Bing",
   "commentTranslate.targetLanguage": "zh-CN",
+  "commentTranslate.hover.enabled": true,
   "commentTranslate.maxTranslationLength": 1000,
-  "svgPreview.autoOpen": false
+  "svgPreview.autoOpen": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  // ================== 代码生成 ==================
+  "codingcopilot.enableInlineChat": true,
+  "codingcopilot.enableInlineChatIDEShortcutsTip": false,
+  "codingcopilot.commitMessageStyle": "Auto",
+  "codingcopilot.commitMessageLanguage": "zh_CN",
+  "codingcopilot.toolbarOnSelection": false,
+  "codingcopilot.enableAutoCompletions": true,
+  "codingcopilot.enableNextEditSuggestions": true,
+  "codingcopilot.generationPreference": "intelligentMode",
+  "codingcopilot.selectedCompletionModel": "",
+  "codingcopilot.enableCompletionLanguage": {
+    "scmInput": false
+  },
+  "codingcopilot.enableIDENotification": true,
+  "codingcopilot.customBlacklistCommands": [],
+  "codingcopilot.disabledSecurityCategories": [
+    "injection",
+    "scriptExec",
+    "powershell"
+  ]
 }
